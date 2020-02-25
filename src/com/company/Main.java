@@ -5,6 +5,7 @@ import com.company.comparators.SoftnessComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -43,5 +44,10 @@ public class Main {
                         ? "Pillow 1 is stronger!"
                         : "You can use pillow1 only for sleeping";
         System.out.println(comparision);
+
+        System.out.println("Compare pillow1 with pillow2 by SoftnessComparator:");
+        SoftnessComparator comparator = new SoftnessComparator();
+        int result = comparator.compare(pillow1, pillow2);
+        System.out.println((result == 1) ? "Pillow 1 is stronger!" : "You can use pillow1 only for sleeping");
     }
 }

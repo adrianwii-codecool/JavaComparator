@@ -7,6 +7,6 @@ import java.util.Comparator;
 public class SoftnessComparator implements Comparator<Pillow> {
     @Override
     public int compare(Pillow o, Pillow o2) {
-        return o.getSoftness() - o2.getSoftness();
+        return o.getSoftness() > o2.getSoftness() ? 1 : 0;
     }
 }
